@@ -1,5 +1,7 @@
+import 'dart:async';
 import 'package:flutter/material.dart';
 import 'widgets.dart';
+import 'package:etera_prototype/screens/screen_signin.dart';
 
 void main() {
   runApp(const eTERA());
@@ -19,13 +21,12 @@ class eTERA extends StatelessWidget {
         body: Container(
           padding: const EdgeInsets.all(25),
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: const [
-              AnimatedEntry(
-                  text_1: 'eTERA', text_2: 'Sua saude em primeiro lugar!')
-            ],
-          ),
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: const [
+                AnimatedEntry(
+                    text_1: 'eTERA', text_2: 'Sua saúde em primeiro lugar!'),
+              ]),
         ),
       ),
     );
