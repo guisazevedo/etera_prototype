@@ -2,6 +2,7 @@ import 'package:etera_prototype/screens/screen_sign_in.dart';
 import 'package:flutter/material.dart';
 import 'dart:async';
 import 'package:etera_prototype/widgets.dart';
+import 'package:page_transition/page_transition.dart';
 
 class RelaxingScreen extends StatefulWidget {
   const RelaxingScreen({Key? key}) : super(key: key);
@@ -20,11 +21,13 @@ class _RelaxingScreenState extends State<RelaxingScreen> {
 
     // initialize timer for 5 seconds
     timer = Timer(
-      const Duration(seconds: 1), // todo => fix time
+      const Duration(seconds: 10), // todo => fix time
       () {
         // Navigating to SignIn screen with counter is executed
         Navigator.push(
-            context, MaterialPageRoute(builder: (context) => const SignIn()));
+            context,
+            PageTransition(
+                type: PageTransitionType.rightToLeft, child: SignIn()));
       },
     );
   }

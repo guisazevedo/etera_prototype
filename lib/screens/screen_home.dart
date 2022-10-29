@@ -13,7 +13,61 @@ class Home extends StatelessWidget {
             'eTERA - Home',
             style: TextStyle(color: Colors.black),
           )),
-
+      body: Padding(
+        padding: const EdgeInsets.fromLTRB(40, 40, 40, 40),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            const Text(
+              'Hello, Maria!',
+              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            Container(
+              height: 200,
+              color: Colors.grey,
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            Column(
+              children: [
+                Row(
+                  children: [
+                    Container(
+                      width: 100,
+                      height: 20,
+                      color: Colors.black,
+                    ),
+                    Container(
+                      width: 100,
+                      height: 20,
+                      color: Colors.grey,
+                    ),
+                  ],
+                ),
+                Row(
+                  children: [
+                    Container(
+                      width: 100,
+                      height: 20,
+                      color: Colors.blue,
+                    ),
+                    Container(
+                      width: 100,
+                      height: 20,
+                      color: Colors.red,
+                    ),
+                  ],
+                ),
+              ],
+            )
+          ],
+        ),
+      ),
       // backgroundColor: Colors.grey.shade100,
       bottomNavigationBar: BottomAppBar(
         //todo => improve BottomAppBar with logos
