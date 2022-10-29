@@ -6,9 +6,10 @@ class SignIn extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      color: Colors.blue,
       child: const Text(
         'test',
-        style: TextStyle(fontSize: 100),
+        style: TextStyle(fontSize: 200),
       ),
     );
   }
