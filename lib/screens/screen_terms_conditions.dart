@@ -79,5 +79,4 @@ class TermsConditions extends StatelessWidget {
 }
 
 // todo => include terms on scrollable text
-// todo => two options a. Accept => home(); b. Don't Accept => Sign in()
 // todo => Accept and Don't should be at the bottom => guarantee user scrolled

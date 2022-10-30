@@ -89,7 +89,7 @@ class OptionsMenu extends StatelessWidget {
       ),
     );
   }
-}
+} // todo => make icon on top of text
 
 // Terms and Conditions alert for joining
 class TermsConditionsAlert extends StatelessWidget {
