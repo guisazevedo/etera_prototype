@@ -86,7 +86,7 @@ class SignIn extends StatelessWidget {
                         style: TextStyle(
                             fontSize: 18, fontWeight: FontWeight.bold))
                   ])),
-              // todo => sign up shold be a button and bold
+              // todo => sign up should be a button and bold
             ]),
       ),
       bottomNavigationBar: BottomAppBar(

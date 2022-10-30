@@ -27,39 +27,56 @@ class Home extends StatelessWidget {
               height: 10,
             ),
             Container(
-              height: 200,
-              color: Colors.grey,
-            ),
+                decoration: const BoxDecoration(
+                    borderRadius: BorderRadius.all(Radius.circular(5)),
+                    color: Colors.white),
+                padding: const EdgeInsets.all(20),
+                height: 200,
+                child: const Text.rich(
+                  TextSpan(
+                    text: 'to be upgraded with Lauren/Roberta\n\n',
+                    style: TextStyle(fontSize: 16),
+                    children: <TextSpan>[
+                      TextSpan(
+                        text: 'DOPAMINE',
+                        style: TextStyle(
+                          fontSize: 29,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ],
+                  ),
+                  style: TextStyle(color: Colors.black),
+                  textAlign: TextAlign.center,
+                )),
             const SizedBox(
               height: 10,
             ),
             Column(
               children: [
                 Row(
-                  children: [
-                    Container(
-                      width: 100,
-                      height: 20,
-                      color: Colors.black,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: const [
+                    OptionsMenu(
+                      icon: Icons.download,
+                      text: 'Top up',
                     ),
-                    Container(
-                      width: 100,
-                      height: 20,
-                      color: Colors.grey,
+                    OptionsMenu(
+                      icon: Icons.upload,
+                      text: 'Redeem',
                     ),
                   ],
                 ),
                 Row(
-                  children: [
-                    Container(
-                      width: 100,
-                      height: 20,
-                      color: Colors.blue,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: const [
+                    OptionsMenu(
+                      icon: Icons.lightbulb_outline,
+                      text: 'Tips',
                     ),
-                    Container(
-                      width: 100,
-                      height: 20,
-                      color: Colors.red,
+                    OptionsMenu(
+                      icon: Icons.local_library_outlined,
+                      text: 'Info',
                     ),
                   ],
                 ),
@@ -83,6 +100,41 @@ class Home extends StatelessWidget {
           ],
         ),
       ), // todo => create widget
+    );
+  }
+}
+
+class OptionsMenu extends StatelessWidget {
+  const OptionsMenu({super.key, required this.icon, required this.text});
+
+  final IconData icon;
+  final String text;
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(10, 10, 10, 10),
+      child: SizedBox(
+        width: 120,
+        height: 120,
+        child: ElevatedButton.icon(
+          style: const ButtonStyle(
+              elevation: MaterialStatePropertyAll(10),
+              backgroundColor: MaterialStatePropertyAll(Colors.white)),
+          onPressed: () {},
+          icon: Icon(
+            // <-- Icon
+            icon,
+            color: Colors.black,
+            size: 24.0,
+          ),
+          label: Text(
+            text,
+            style: const TextStyle(
+                color: Colors.black, fontWeight: FontWeight.bold),
+          ), // <-- Text
+        ),
+      ),
     );
   }
 }
