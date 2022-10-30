@@ -103,38 +103,3 @@ class Home extends StatelessWidget {
     );
   }
 }
-
-class OptionsMenu extends StatelessWidget {
-  const OptionsMenu({super.key, required this.icon, required this.text});
-
-  final IconData icon;
-  final String text;
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.fromLTRB(10, 10, 10, 10),
-      child: SizedBox(
-        width: 120,
-        height: 120,
-        child: ElevatedButton.icon(
-          style: const ButtonStyle(
-              elevation: MaterialStatePropertyAll(10),
-              backgroundColor: MaterialStatePropertyAll(Colors.white)),
-          onPressed: () {},
-          icon: Icon(
-            // <-- Icon
-            icon,
-            color: Colors.black,
-            size: 24.0,
-          ),
-          label: Text(
-            text,
-            style: const TextStyle(
-                color: Colors.black, fontWeight: FontWeight.bold),
-          ), // <-- Text
-        ),
-      ),
-    );
-  }
-}

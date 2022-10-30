@@ -1,6 +1,9 @@
+import 'package:etera_prototype/screens/screen_terms_conditions.dart';
 import 'package:flutter/material.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:etera_prototype/constants.dart';
+import 'package:page_transition/page_transition.dart';
+import 'package:etera_prototype/screens/screen_home.dart';
 
 // Animated text on app entry
 class AnimatedEntry extends StatelessWidget {
@@ -49,5 +52,103 @@ class PartnershipItems extends StatelessWidget {
               fontWeight: FontWeight.bold,
               color: Colors.black,
             )));
+  }
+}
+
+// Options Menu for home screen
+class OptionsMenu extends StatelessWidget {
+  const OptionsMenu({super.key, required this.icon, required this.text});
+
+  final IconData icon;
+  final String text;
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(10, 10, 10, 10),
+      child: SizedBox(
+        width: 120,
+        height: 120,
+        child: ElevatedButton.icon(
+          style: const ButtonStyle(
+              elevation: MaterialStatePropertyAll(10),
+              backgroundColor: MaterialStatePropertyAll(Colors.white)),
+          onPressed: () {},
+          icon: Icon(
+            // <-- Icon
+            icon,
+            color: Colors.black,
+            size: 24.0,
+          ),
+          label: Text(
+            text,
+            style: const TextStyle(
+                color: Colors.black, fontWeight: FontWeight.bold),
+          ), // <-- Text
+        ),
+      ),
+    );
+  }
+}
+
+// Terms and Conditions alert for joining
+class TermsConditionsAlert extends StatelessWidget {
+  const TermsConditionsAlert({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return AlertDialog(
+      title: const Text("Terms & Conditions"),
+      content: const Text("Do you agree with eTERA's terms & conditions?"),
+      actions: <Widget>[
+        Row(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              TextButton(
+                child: const Center(
+                    child: Text(
+                  "YES",
+                  textAlign: TextAlign.center,
+                )),
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      PageTransition(
+                          type: PageTransitionType.rightToLeft,
+                          child: const Home()));
+                },
+              ),
+              const SizedBox(width: 10),
+              TextButton(
+                child: const Center(
+                    child: Text(
+                  "NO",
+                  textAlign: TextAlign.center,
+                )),
+                onPressed: () {
+                  Navigator.of(context).pop();
+                },
+              ),
+              const SizedBox(width: 10),
+              TextButton(
+                child: const Center(
+                    child: Text(
+                  "Terms &\nConditions",
+                  textAlign: TextAlign.center,
+                )),
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      PageTransition(
+                          type: PageTransitionType.rightToLeft,
+                          child: const TermsConditions()));
+                },
+              ),
+            ])
+      ],
+    );
   }
 }

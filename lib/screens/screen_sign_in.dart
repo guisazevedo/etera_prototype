@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:etera_prototype/widgets.dart';
 import 'package:etera_prototype/constants.dart';
-import 'package:page_transition/page_transition.dart';
-import 'package:etera_prototype/screens/screen_home.dart';
 
 class SignIn extends StatelessWidget {
   const SignIn({Key? key}) : super(key: key);
@@ -50,12 +48,13 @@ class SignIn extends StatelessWidget {
               ),
               ElevatedButton(
                 onPressed: () {
-                  // Navigating to SignIn screen with counter is executed
-                  Navigator.push(
-                      context,
-                      PageTransition(
-                          type: PageTransitionType.rightToLeft,
-                          child: const Home()));
+                  // Navigate to warning "Terms & Conditions"
+                  showDialog(
+                    context: context,
+                    builder: (BuildContext context) {
+                      return const TermsConditionsAlert(); // todo => log that the person accepted the T&C
+                    },
+                  );
                 },
                 style: ButtonStyle(
                   backgroundColor:
@@ -69,23 +68,24 @@ class SignIn extends StatelessWidget {
               const SizedBox(
                 height: 8.0,
               ),
-              // todo => include a line
               const Padding(
-                padding: EdgeInsets.fromLTRB(10, 12, 10, 16),
+                padding: EdgeInsets.fromLTRB(40, 12, 40, 16),
                 child: Divider(
                   thickness: .5,
                   color: Colors.grey,
                 ),
               ),
-              const Text.rich(TextSpan(
-                  text: 'Already a user? ',
-                  style: TextStyle(fontSize: 16),
-                  children: <TextSpan>[
-                    TextSpan(
-                        text: '  Sign up.',
-                        style: TextStyle(
-                            fontSize: 18, fontWeight: FontWeight.bold))
-                  ])),
+              const Center(
+                child: Text.rich(TextSpan(
+                    text: 'Already a user? ',
+                    style: TextStyle(fontSize: 16),
+                    children: <TextSpan>[
+                      TextSpan(
+                          text: '  Sign up.',
+                          style: TextStyle(
+                              fontSize: 18, fontWeight: FontWeight.bold))
+                    ])),
+              ),
               // todo => sign up should be a button and bold
             ]),
       ),
