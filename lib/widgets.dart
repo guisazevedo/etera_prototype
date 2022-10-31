@@ -249,3 +249,49 @@ class RedeemProduct extends StatelessWidget {
     );
   }
 }
+
+// Pix account info
+class TitleValue extends StatelessWidget {
+  const TitleValue({super.key, required this.title, required this.value});
+
+  final String title;
+  final String value;
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(title, style: const TextStyle(color: Colors.black38)),
+        Text(
+          value,
+          style: const TextStyle(fontSize: 18),
+        )
+      ],
+    );
+  }
+}
+
+// Open Bank Bank Selection
+class OpenBankSelection extends StatelessWidget {
+  const OpenBankSelection({super.key, required this.bank});
+
+  final String bank;
+
+  @override
+  Widget build(BuildContext context) {
+    return ElevatedButton(
+        onPressed: () {},
+        style: const ButtonStyle(
+            backgroundColor: MaterialStatePropertyAll(Colors.white)),
+        child: SizedBox(
+          width: 100,
+          child: Text(
+            bank,
+            textAlign: TextAlign.center,
+            style: const TextStyle(
+                color: Colors.black, fontSize: 16, fontWeight: FontWeight.bold),
+          ),
+        ));
+  }
+}

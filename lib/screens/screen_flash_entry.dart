@@ -21,7 +21,7 @@ class _RelaxingScreenState extends State<RelaxingScreen> {
 
     // initialize timer for 5 seconds
     timer = Timer(
-      const Duration(seconds: 1), // todo => fix time
+      const Duration(seconds: 10), // todo => fix time
       () {
         // Navigating to SignIn screen with counter is executed
         Navigator.push(

@@ -1,6 +1,11 @@
+import 'package:etera_prototype/screens/redeem/screen_insurance.dart';
+import 'package:etera_prototype/screens/redeem/screen_loan.dart';
+import 'package:etera_prototype/screens/redeem/screen_yalo.dart';
 import 'package:flutter/material.dart';
 import 'package:etera_prototype/widgets.dart';
 import 'package:etera_prototype/constants.dart';
+import 'package:etera_prototype/screens/redeem/screen_consultations.dart';
+import 'package:etera_prototype/screens/redeem/screen_exams.dart';
 
 class RedeemOverall extends StatelessWidget {
   const RedeemOverall({Key? key}) : super(key: key);
@@ -28,24 +33,19 @@ class RedeemOverall extends StatelessWidget {
             RedeemProduct(
                 logo: 'DrC\nlogo',
                 text: 'Consultations',
-                direction: RedeemOverall()),
+                direction: Consultations()),
+            RedeemProduct(logo: 'DrC\nlogo', text: 'Exams', direction: Exams()),
             RedeemProduct(
-                logo: 'DrC\nlogo',
-                text: 'Exams and procedures',
-                direction: RedeemOverall()),
-            RedeemProduct(
-                logo: 'Yalo\nlogo',
-                text: 'Card DrConsulta',
-                direction: RedeemOverall()),
+                logo: 'Yalo\nlogo', text: 'Card DrConsulta', direction: Yalo()),
             // RedeemProduct(logo: 'Cuidar.me\nlogo', text: 'Healthcare Plans'),
             RedeemProduct(
                 logo: 'Bank\nlogo',
                 text: 'Loans: surgeries & exams',
-                direction: RedeemOverall()),
+                direction: Loans()),
             RedeemProduct(
                 logo: 'Insurance\nlogo',
                 text: 'Custom insurance',
-                direction: RedeemOverall()),
+                direction: Insurance()),
             SizedBox(height: 80),
             SizedBox(
               width: double.infinity,

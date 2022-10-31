@@ -14,7 +14,7 @@ class Sponsor extends StatelessWidget {
           ),
           automaticallyImplyLeading: false,
           title: const Text(
-            'eTERA - Top up',
+            'eTERA - Sponsor',
             style: TextStyle(color: Colors.black),
           )),
       body: Container(),

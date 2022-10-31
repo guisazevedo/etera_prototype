@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:etera_prototype/widgets.dart';
 
-class QRCode extends StatelessWidget {
-  const QRCode({Key? key}) : super(key: key);
+class Exams extends StatelessWidget {
+  const Exams({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +14,7 @@ class QRCode extends StatelessWidget {
           ),
           automaticallyImplyLeading: false,
           title: const Text(
-            'eTERA - Benefit Programs',
+            'eTERA - Exams',
             style: TextStyle(color: Colors.black),
           )),
       body: Container(),
