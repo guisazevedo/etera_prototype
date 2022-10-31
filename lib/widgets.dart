@@ -55,12 +55,17 @@ class PartnershipItems extends StatelessWidget {
   }
 }
 
-// Options Menu for home screen
+// Options Menu for home screen todo => talvez fazer como o Redeem Product (style) & icon on top of text
 class OptionsMenu extends StatelessWidget {
-  const OptionsMenu({super.key, required this.icon, required this.text});
+  const OptionsMenu(
+      {super.key,
+      required this.icon,
+      required this.text,
+      required this.direction});
 
   final IconData icon;
   final String text;
+  final Widget direction;
 
   @override
   Widget build(BuildContext context) {
@@ -73,7 +78,12 @@ class OptionsMenu extends StatelessWidget {
           style: const ButtonStyle(
               elevation: MaterialStatePropertyAll(10),
               backgroundColor: MaterialStatePropertyAll(Colors.white)),
-          onPressed: () {},
+          onPressed: () {
+            Navigator.push(
+                context,
+                PageTransition(
+                    type: PageTransitionType.rightToLeft, child: direction));
+          },
           icon: Icon(
             // <-- Icon
             icon,
@@ -88,8 +98,8 @@ class OptionsMenu extends StatelessWidget {
         ),
       ),
     );
-  }
-} // todo => make icon on top of text
+  } // todo => make icon on top of text
+}
 
 // Terms and Conditions alert for joining
 class TermsConditionsAlert extends StatelessWidget {
@@ -149,6 +159,81 @@ class TermsConditionsAlert extends StatelessWidget {
               ),
             ])
       ],
+    );
+  }
+}
+
+// Custom BottomAppBar
+class CustomBottomAppBar extends StatelessWidget {
+  const CustomBottomAppBar({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return BottomAppBar(
+      //todo => improve BottomAppBar with logos
+      color: Colors.grey.shade100,
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: const [
+          PartnershipItems(text: 'Partnerships:'),
+          PartnershipItems(text: 'DrC\nlogo'),
+          PartnershipItems(text: 'Bank\nlogo'),
+          PartnershipItems(text: 'DrugStore\nlogo'),
+          PartnershipItems(text: 'Insurance\nlogo')
+        ],
+      ),
+    );
+  }
+}
+
+// Redeem products todo => need to include OnPressed
+class RedeemProduct extends StatelessWidget {
+  const RedeemProduct({super.key, required this.logo, required this.text});
+
+  final String logo; // todo => needs to be transformed into Image when logo
+  final String text;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      margin: const EdgeInsets.fromLTRB(20, 10, 20, 10),
+      height: 100,
+      child: ElevatedButton(
+        style: ElevatedButton.styleFrom(
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5)),
+          backgroundColor: Colors.white,
+          elevation: 5,
+          shadowColor: Colors.grey,
+        ),
+        onPressed: () {},
+        child: Row(
+          children: [
+            Container(
+              width: 50,
+              margin: const EdgeInsets.all(20),
+              child: Text(
+                logo,
+                style: const TextStyle(
+                  color: Colors.black,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+            Container(
+              margin: const EdgeInsets.all(20),
+              child: Text(
+                text,
+                style: const TextStyle(
+                  color: Colors.black,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
