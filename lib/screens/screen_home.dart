@@ -2,6 +2,7 @@ import 'package:etera_prototype/screens/screen_top_up.dart';
 import 'package:flutter/material.dart';
 import 'package:etera_prototype/widgets.dart';
 import 'package:etera_prototype/screens/screen_redeem.dart';
+import 'package:etera_prototype/constants.dart';
 
 // todo => include msg of benefits -> Drogasil, Bank, etc...
 // todo => include flash cards for first time loggin in
@@ -90,6 +91,15 @@ class Home extends StatelessWidget {
                     ],
                   ),
                 ],
+              ),
+              const SizedBox(height: 80),
+              const SizedBox(
+                width: double.infinity,
+                child: Text(
+                  kCopyright,
+                  style: TextStyle(color: Colors.grey),
+                  textAlign: TextAlign.center,
+                ),
               )
             ],
           ),

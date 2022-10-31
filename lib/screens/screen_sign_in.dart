@@ -83,12 +83,21 @@ class SignIn extends StatelessWidget {
                       style: TextStyle(fontSize: 16),
                       children: <TextSpan>[
                         TextSpan(
-                            text: '  Sign up.',
+                            text:
+                                '  Sign up.', // todo => sign up should be a button and bold
                             style: TextStyle(
                                 fontSize: 18, fontWeight: FontWeight.bold))
                       ])),
                 ),
-                // todo => sign up should be a button and bold
+                const SizedBox(height: 80),
+                const SizedBox(
+                  width: double.infinity,
+                  child: Text(
+                    kCopyright,
+                    style: TextStyle(color: Colors.grey),
+                    textAlign: TextAlign.center,
+                  ),
+                )
               ]),
         ),
       ),

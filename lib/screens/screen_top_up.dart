@@ -1,5 +1,10 @@
+import 'package:etera_prototype/screens/top_up/screen_qrcode.dart';
+import 'package:etera_prototype/screens/top_up/screen_sponsor.dart';
 import 'package:flutter/material.dart';
 import 'package:etera_prototype/widgets.dart';
+import 'package:etera_prototype/constants.dart';
+import 'package:etera_prototype/screens/top_up/screen_transfer.dart';
+import 'package:etera_prototype/screens/top_up/screen_pix.dart';
 
 class TopUp extends StatelessWidget {
   const TopUp({Key? key}) : super(key: key);
@@ -26,15 +31,29 @@ class TopUp extends StatelessWidget {
             ), // todo => Fix size of containers - width
             RedeemProduct(
                 logo: 'Pix\nlogo',
-                text:
-                    'Your Pix account number:\nxxx.xxx.xxx.xxx'), // todo => logos and links
+                text: 'Send Pix to your account',
+                direction: Pix()), // todo => logos and links
             RedeemProduct(
                 logo: 'Transfer\nlogo',
-                text: 'Monthly installments\nimprove this text...'),
-            RedeemProduct(logo: 'QR Code\nlogo', text: 'Benefit programs'),
+                text: 'Monthly installments\nimprove this text...',
+                direction: TransferCash()),
+            RedeemProduct(
+                logo: 'QR Code\nlogo',
+                text: 'Benefit programs',
+                direction: QRCode()),
             RedeemProduct(
                 logo: 'Shake Hands\nlogo',
-                text: 'Sponsor:\nget the help you need'),
+                text: 'Sponsor:\nget the help you need',
+                direction: Sponsor()),
+            SizedBox(height: 80),
+            SizedBox(
+              width: double.infinity,
+              child: Text(
+                kCopyright,
+                style: TextStyle(color: Colors.grey),
+                textAlign: TextAlign.center,
+              ),
+            )
           ],
         ),
       ),

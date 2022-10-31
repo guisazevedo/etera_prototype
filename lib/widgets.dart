@@ -7,11 +7,12 @@ import 'package:etera_prototype/screens/screen_home.dart';
 
 // Animated text on app entry
 class AnimatedEntry extends StatelessWidget {
-  const AnimatedEntry(
-      {super.key,
-      required this.text_1,
-      required this.text_2,
-      required this.text_3});
+  const AnimatedEntry({
+    super.key,
+    required this.text_1,
+    required this.text_2,
+    required this.text_3,
+  });
 
   final String text_1;
   final String text_2;
@@ -55,7 +56,7 @@ class PartnershipItems extends StatelessWidget {
   }
 }
 
-// Options Menu for home screen todo => talvez fazer como o Redeem Product (style) & icon on top of text
+// Options Menu for home screen todo => do like the Redeem Product (style) & icon on top of text
 class OptionsMenu extends StatelessWidget {
   const OptionsMenu(
       {super.key,
@@ -190,10 +191,16 @@ class CustomBottomAppBar extends StatelessWidget {
 
 // Redeem products todo => need to include OnPressed
 class RedeemProduct extends StatelessWidget {
-  const RedeemProduct({super.key, required this.logo, required this.text});
+  const RedeemProduct({
+    super.key,
+    required this.logo,
+    required this.text,
+    required this.direction,
+  });
 
   final String logo; // todo => needs to be transformed into Image when logo
   final String text;
+  final Widget direction;
 
   @override
   Widget build(BuildContext context) {
@@ -207,7 +214,12 @@ class RedeemProduct extends StatelessWidget {
           elevation: 5,
           shadowColor: Colors.grey,
         ),
-        onPressed: () {},
+        onPressed: () {
+          Navigator.push(
+              context,
+              PageTransition(
+                  type: PageTransitionType.rightToLeft, child: direction));
+        },
         child: Row(
           children: [
             Container(

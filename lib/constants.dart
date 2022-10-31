@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 const kTextStyleEntry =
     TextStyle(fontSize: 40.0, fontWeight: FontWeight.w900, color: Colors.black);
 
+// todo => include explanation for this constant...
 const kTextFieldDecoration = InputDecoration(
     hintText: '',
     hintStyle: TextStyle(color: Colors.grey),
@@ -18,6 +19,9 @@ const kTextFieldDecoration = InputDecoration(
     focusedBorder: OutlineInputBorder(
         borderSide: BorderSide(color: Colors.grey, width: 2.0),
         borderRadius: BorderRadius.all(Radius.circular(4.0))));
+
+// "copyright (c) 2022"
+const String kCopyright = 'Copyright \u00a9 2022';
 
 // Terms and conditions eTERA
 const String termsConditions =
@@ -34,6 +38,57 @@ At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergr
 // todo => how to wrap text (above)
 // todo => create a kAppBar
 // todo => Include "Copyright (c) 2022" on the bottom of every page
+// todo => BottomAppBar include logos partnerships
+// todo => review project and refactor it
 
 // structural to dos
-// todo => BottomAppBar include logos partnerships
+/// todo => TOP UP SCREEN:
+/// . Pix number and "copy" icon
+
+/// todo => Monthly installments
+/// . improve text...
+/// . screen => explain: text; logo Bacen; horizontal scroll list of banks/programs;
+/// value to be drawn; OK button => log this; Cancel button
+/// accept terms and conditions???
+
+/// todo => Benefit programs
+/// . screen => explain QR/Bar Code generator: text; value & ok button; QR/Bar Code
+
+/// todo => Sponsor
+/// .screen => explain Sponsor & msg; name; you 1:1x sponsor or you 2:1x sponsor; limit
+/// try do design the msg the sponsor will receive (even if on this prototype app)
+/// explain to Sponsor the tax benefit
+
+/// todo => REDEEM SCREEN
+/// . logos
+
+/// todo => Consultations
+/// . screen sequence -> Online / Present -> City -> Specialty (show price) -> Branch -> day/time/doctor -> to whom? -> pay now (discount) or later (no discount)
+/// . add terms and conditions from DrC
+
+/// todo => Exams
+/// . understand...
+/// . add terms and conditions from DrC
+
+/// todo => Yalo
+/// . see picture on iPhone
+/// . add terms and conditions from Yalo/DrC
+
+/// todo => Loans
+/// . see picture on iPhone
+/// . add terms and conditions from Bank
+
+/// todo => Insurance
+/// . understand...
+
+/// todo => page with all receipts
+
+/// todo => TIPS
+/// . flash card valid tip
+/// . list of tips/dynamic discounts
+
+/// todo => INFO
+/// . personal data -> edit
+/// . FAQ
+/// . Receipts (cards)
+/// . Receipts list of expired / transacted
