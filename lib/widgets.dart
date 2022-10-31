@@ -164,6 +164,43 @@ class TermsConditionsAlert extends StatelessWidget {
   }
 }
 
+// Open banking => please follow instructions at your bank
+class FollowOpenBankingAlert extends StatelessWidget {
+  const FollowOpenBankingAlert({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return AlertDialog(
+      title: const Text("Open Banking"),
+      content: const Text(
+          "You will be directed to the selected bank.\n\nPlease follow the authorization instructions."),
+      actions: <Widget>[
+        Row(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              TextButton(
+                child: const Center(
+                    child: Text(
+                  "OK",
+                  textAlign: TextAlign.center,
+                )),
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      PageTransition(
+                          type: PageTransitionType.rightToLeft,
+                          child: const Home()));
+                },
+              ),
+            ])
+      ],
+    );
+  }
+}
+
 // Custom BottomAppBar
 class CustomBottomAppBar extends StatelessWidget {
   const CustomBottomAppBar({

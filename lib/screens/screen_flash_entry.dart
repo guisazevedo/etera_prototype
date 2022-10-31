@@ -21,7 +21,7 @@ class _RelaxingScreenState extends State<RelaxingScreen> {
 
     // initialize timer for 5 seconds
     timer = Timer(
-      const Duration(seconds: 10), // todo => fix time
+      const Duration(seconds: 1), // todo => fix time
       () {
         // Navigating to SignIn screen with counter is executed
         Navigator.push(
@@ -48,7 +48,7 @@ class _RelaxingScreenState extends State<RelaxingScreen> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: const [
           AnimatedEntry(
-              text_1: 'Your health in first place!',
+              text_1: 'Your health in first place',
               text_2: 'RIGHT NOW!',
               text_3: 'eTERA'),
         ],

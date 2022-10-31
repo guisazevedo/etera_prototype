@@ -64,6 +64,7 @@ class TransferCash extends StatelessWidget {
               height: 10,
             ),
             TextField(
+                // todo => format inputed value
                 onChanged: (value) {
                   //Do something with the user input.
                 },
@@ -72,11 +73,11 @@ class TransferCash extends StatelessWidget {
             const SizedBox(height: 16),
             ElevatedButton(
               onPressed: () {
-                // Navigate to warning "Terms & Conditions"
+                // Navigate to warning "OpenBanking"
                 showDialog(
                   context: context,
                   builder: (BuildContext context) {
-                    return const TermsConditionsAlert(); // todo => use "please follow instruction on your bank web service"
+                    return const FollowOpenBankingAlert(); // todo => use "please follow instruction on your bank web service"
                   },
                 );
               },
@@ -95,6 +96,14 @@ class TransferCash extends StatelessWidget {
                   style: TextStyle(color: Colors.grey),
                   textAlign: TextAlign.center),
             ),
+            const SizedBox(
+              width: double.infinity,
+              child: Text(
+                kCopyright,
+                style: TextStyle(color: Colors.grey),
+                textAlign: TextAlign.center,
+              ),
+            )
           ],
         ),
       ),
