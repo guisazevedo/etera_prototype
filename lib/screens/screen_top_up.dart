@@ -35,7 +35,7 @@ class TopUp extends StatelessWidget {
                 direction: Pix()), // todo => logos and links
             RedeemProduct(
                 logo: 'Transfer\nlogo',
-                text: 'Monthly installments\nimprove this text...',
+                text: 'Monthly installments',
                 direction: TransferCash()),
             RedeemProduct(
                 logo: 'QR Code\nlogo',
@@ -45,7 +45,7 @@ class TopUp extends StatelessWidget {
                 logo: 'Shake Hands\nlogo',
                 text: 'Sponsor:\nget the help you need',
                 direction: Sponsor()),
-            SizedBox(height: 80),
+            SizedBox(height: 60),
             SizedBox(
               width: double.infinity,
               child: Text(

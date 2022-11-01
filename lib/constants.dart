@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 const kTextStyleEntry =
     TextStyle(fontSize: 40.0, fontWeight: FontWeight.w900, color: Colors.black);
 
-// todo => include explanation for this constant...
+// decoration of text fields
 const kTextFieldDecoration = InputDecoration(
     hintText: '',
     hintStyle: TextStyle(color: Colors.grey),
@@ -43,16 +43,16 @@ At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergr
 
 // structural to dos
 /// todo => TOP UP SCREEN:
-/// . Pix number and "copy" icon
+/// . Pix number "copy" icon
 
 /// todo => Monthly installments
 /// . improve text...
 /// . screen => explain: text; logo Bacen; horizontal scroll list of banks/programs;
-/// value to be drawn; OK button => log this; Cancel button
-/// accept terms and conditions???
+/// . log transaction & card
+/// . possibility to cancel future transfers
 
 /// todo => Benefit programs
-/// . screen => explain QR/Bar Code generator: text; value & ok button; QR/Bar Code
+/// . log transaction
 
 /// todo => Sponsor
 /// .screen => explain Sponsor & msg; name; you 1:1x sponsor or you 2:1x sponsor; limit

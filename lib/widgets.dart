@@ -56,7 +56,7 @@ class PartnershipItems extends StatelessWidget {
   }
 }
 
-// Options Menu for home screen todo => do like the Redeem Product (style) & icon on top of text
+// Option menu
 class OptionsMenu extends StatelessWidget {
   const OptionsMenu(
       {super.key,
@@ -71,35 +71,39 @@ class OptionsMenu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.fromLTRB(10, 10, 10, 10),
+      padding: const EdgeInsets.all(10),
       child: SizedBox(
         width: 120,
         height: 120,
-        child: ElevatedButton.icon(
-          style: const ButtonStyle(
-              elevation: MaterialStatePropertyAll(10),
-              backgroundColor: MaterialStatePropertyAll(Colors.white)),
+        child: ElevatedButton(
+          style: ElevatedButton.styleFrom(
+              backgroundColor: Colors.white,
+              shadowColor: Colors.grey,
+              elevation: 5),
           onPressed: () {
             Navigator.push(
                 context,
                 PageTransition(
                     type: PageTransitionType.rightToLeft, child: direction));
           },
-          icon: Icon(
-            // <-- Icon
-            icon,
-            color: Colors.black,
-            size: 24.0,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Icon(icon, color: Colors.black),
+              const SizedBox(height: 5),
+              Text(
+                text,
+                style: const TextStyle(
+                    color: Colors.black,
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold),
+              )
+            ],
           ),
-          label: Text(
-            text,
-            style: const TextStyle(
-                color: Colors.black, fontWeight: FontWeight.bold),
-          ), // <-- Text
         ),
       ),
     );
-  } // todo => make icon on top of text
+  }
 }
 
 // Terms and Conditions alert for joining

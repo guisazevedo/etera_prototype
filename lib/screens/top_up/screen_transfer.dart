@@ -96,14 +96,6 @@ class TransferCash extends StatelessWidget {
                   style: TextStyle(color: Colors.grey),
                   textAlign: TextAlign.center),
             ),
-            const SizedBox(
-              width: double.infinity,
-              child: Text(
-                kCopyright,
-                style: TextStyle(color: Colors.grey),
-                textAlign: TextAlign.center,
-              ),
-            )
           ],
         ),
       ),

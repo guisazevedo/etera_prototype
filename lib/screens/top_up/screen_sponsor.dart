@@ -7,7 +7,6 @@ class Sponsor extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blue,
       appBar: AppBar(
           leading: const BackButton(
             color: Colors.black,
@@ -17,7 +16,21 @@ class Sponsor extends StatelessWidget {
             'eTERA - Sponsor',
             style: TextStyle(color: Colors.black),
           )),
-      body: Container(),
+      body: SingleChildScrollView(
+          padding: const EdgeInsets.fromLTRB(20, 40, 20, 40),
+          child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: const [
+                SizedBox(height: 20), // todo => widget with "slide header"
+                Text(
+                  'Select your sponsor',
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                ),
+                SizedBox(height: 30),
+                Text(
+                    "Select your sponsor and the details of the sponsorhip program."),
+                SizedBox(height: 40)
+              ])),
       bottomNavigationBar: const CustomBottomAppBar(),
     );
   }

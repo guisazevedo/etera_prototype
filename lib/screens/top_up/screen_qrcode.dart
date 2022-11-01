@@ -48,15 +48,7 @@ class QRCode extends StatelessWidget {
                       kTextFieldDecoration.copyWith(hintText: 'R\$ 0.00')),
               const SizedBox(height: 16),
               ElevatedButton(
-                onPressed: () {
-                  // Navigate to warning "OpenBanking"
-                  showDialog(
-                    context: context,
-                    builder: (BuildContext context) {
-                      return const FollowOpenBankingAlert(); // todo => use "please follow instruction on your bank web service"
-                    },
-                  );
-                },
+                onPressed: () {}, // todo => generate QR CODE
                 style: ButtonStyle(
                   backgroundColor:
                       MaterialStateProperty.all<Color>(Colors.black),
@@ -76,7 +68,7 @@ class QRCode extends StatelessWidget {
                   gapless: false,
                 ),
               ),
-              const SizedBox(height: 20),
+              const SizedBox(height: 30),
               const SizedBox(
                 width: double.infinity,
                 child: Text(
