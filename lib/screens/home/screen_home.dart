@@ -59,7 +59,7 @@ class Home extends StatelessWidget {
                     textAlign: TextAlign.center,
                   )),
               const SizedBox(
-                height: 10,
+                height: 40,
               ),
               Column(
                 children: [
@@ -94,7 +94,7 @@ class Home extends StatelessWidget {
                   ),
                 ],
               ),
-              const SizedBox(height: 80),
+              const SizedBox(height: 60),
               const SizedBox(
                 width: double.infinity,
                 child: Text(

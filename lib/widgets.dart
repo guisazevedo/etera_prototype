@@ -410,7 +410,7 @@ class RedeemProduct extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.fromLTRB(20, 10, 20, 10),
+      margin: const EdgeInsets.fromLTRB(20, 10, 20, 20),
       height: 100,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(

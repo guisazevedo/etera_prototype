@@ -14,7 +14,7 @@ class TransferCash extends StatelessWidget {
           ),
           automaticallyImplyLeading: false,
           title: const Text(
-            'eTERA - Monthly payments',
+            'eTERA - Payment initiator',
             style: kAppBarStyle,
           )),
       body: SingleChildScrollView(
@@ -24,9 +24,9 @@ class TransferCash extends StatelessWidget {
           children: [
             const ScreenHeader(
                 title:
-                    'Monthly transfers into your Health Investment Account (HIA)',
+                    'Authorize transfers into your Health Investment Account (HIA)',
                 text: 'Powered by Banco Central\'s Iniciacao de Pagamento.'),
-            // const SizedBox(height: 60), // todo => include BC logo
+            const SizedBox(height: 10),
             SizedBox(
                 height: 120,
                 width: double.infinity,
@@ -53,7 +53,7 @@ class TransferCash extends StatelessWidget {
               height: 40,
             ),
             const Text(
-              'Enter monthly value to be transferred \ninto your HSA:',
+              'Enter monthly value to be transferred into your HIA:',
               style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
             ),
             const SizedBox(

@@ -45,11 +45,6 @@ At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergr
 
 // structural to dos
 
-/// todo => Monthly installments
-/// . screen => explain: text; logo Bacen; horizontal scroll list of banks/programs;
-/// . log transaction & card
-/// . possibility to cancel future transfers
-
 /// todo => Benefit programs
 /// . log transaction
 /// . generate QR code

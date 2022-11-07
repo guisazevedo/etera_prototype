@@ -3,7 +3,7 @@ import 'package:etera_prototype/screens/top_up/screen_sponsor.dart';
 import 'package:flutter/material.dart';
 import 'package:etera_prototype/widgets.dart';
 import 'package:etera_prototype/constants.dart';
-import 'package:etera_prototype/screens/top_up/screen_itp.dart';
+//import 'package:etera_prototype/screens/top_up/screen_itp.dart';
 import 'package:etera_prototype/screens/top_up/screen_pix.dart';
 
 class TopUp extends StatelessWidget {
@@ -25,27 +25,32 @@ class TopUp extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
-          children: const [
-            SizedBox(height: 80), // todo => Fix size of containers - width
-            RedeemProduct(
+          children: [
+            const SizedBox(height: 40),
+            Image.asset(
+              "images/eTera_logo.png",
+              height: 100,
+              fit: BoxFit.fitHeight,
+            ),
+            const RedeemProduct(
               icon: Icons.gpp_good_outlined,
               text: 'Easy Pix',
               direction: Pix(),
             ),
-            RedeemProduct(
-                icon: Icons.calendar_month_outlined,
-                text: 'Payment Initiator',
-                direction: TransferCash()),
-            RedeemProduct(
+            //RedeemProduct(
+            //icon: Icons.calendar_month_outlined,
+            //text: 'Payment Initiator',
+            //direction: TransferCash()),
+            const RedeemProduct(
                 icon: Icons.qr_code_scanner,
                 text: 'Benefit Programs',
                 direction: QRCode()),
-            RedeemProduct(
+            const RedeemProduct(
                 icon: Icons.handshake_outlined,
                 text: 'Sponsor:\nA helping hand',
                 direction: Sponsor()),
-            SizedBox(height: 80),
-            SizedBox(
+            const SizedBox(height: 40),
+            const SizedBox(
               width: double.infinity,
               child: Text(
                 kCopyright,

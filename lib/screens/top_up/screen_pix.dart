@@ -44,7 +44,7 @@ class Pix extends StatelessWidget {
             Row(
               children: [
                 const TitleValue(title: 'PIX Key', value: 'A123.B456.C789'),
-                const SizedBox(width: 10),
+                const SizedBox(width: 1),
                 // const Icon(Icons.content_copy, color: Colors.blueGrey),
                 IconButton(
                     onPressed: () {
@@ -54,7 +54,7 @@ class Pix extends StatelessWidget {
                     },
                     icon: const Icon(
                       Icons.content_copy,
-                      color: Colors.blueGrey,
+                      color: Colors.blueAccent,
                     ))
               ],
             ),

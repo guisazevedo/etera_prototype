@@ -26,24 +26,29 @@ class RedeemOverall extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
-          children: const [
-            SizedBox(height: 80),
-            RedeemProduct(
+          children: [
+            const SizedBox(height: 20),
+            Image.asset(
+              "images/eTera_logo.png",
+              height: 100,
+              fit: BoxFit.fitHeight,
+            ),
+            const RedeemProduct(
                 icon: Icons.medical_services_outlined,
                 text: 'Consultations',
                 direction: Consultations()),
-            RedeemProduct(
+            const RedeemProduct(
                 icon: Icons.biotech_sharp, text: 'Exams', direction: Exams()),
-            RedeemProduct(
+            const RedeemProduct(
                 icon: Icons.account_balance_wallet_outlined,
                 text: 'Medical Loans',
                 direction: Loans()),
-            RedeemProduct(
+            const RedeemProduct(
                 icon: Icons.smart_button_outlined,
                 text: 'Smart insurance',
                 direction: Insurance()),
-            SizedBox(height: 40),
-            SizedBox(
+            const SizedBox(height: 40),
+            const SizedBox(
               width: double.infinity,
               child: Text(
                 kCopyright,
