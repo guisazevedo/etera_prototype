@@ -40,7 +40,7 @@ class QRCode extends StatelessWidget {
                     //Do something with the user input.
                   },
                   decoration:
-                      kTextFieldDecoration.copyWith(hintText: 'R\$ 0.00')),
+                      kTextFieldDecoration.copyWith(hintText: 'R\$ 10.00')),
               const SizedBox(height: 16),
               ElevatedButton(
                 onPressed: () {}, // todo => generate QR CODE
@@ -56,8 +56,7 @@ class QRCode extends StatelessWidget {
               const SizedBox(height: 20),
               Center(
                 child: QrImage(
-                  data: // todo => what to do for more complex data?
-                      'Guilherme has super powers!!!',
+                  data: 'G really impresses me sometimes!!!',
                   //'Bank XXX, Branch: xxx, Account: xxx, Value: xxx, CPF: xxx, Good until: xxx', // todo => model data generator
                   version: QrVersions.auto,
                   size: 200,

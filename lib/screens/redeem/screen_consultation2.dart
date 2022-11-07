@@ -1,9 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:etera_prototype/widgets.dart';
 import 'package:etera_prototype/constants.dart';
+import 'package:etera_prototype/widgets.dart';
 
-class Consultations extends StatelessWidget {
-  const Consultations({Key? key}) : super(key: key);
+class Consultation2 extends StatefulWidget {
+  const Consultation2({Key? key}) : super(key: key);
+
+  @override
+  State<Consultation2> createState() => _Consultation2State();
+}
+
+class _Consultation2State extends State<Consultation2> {
+  String consultationlMode = 'In-person consultation';
 
   @override
   Widget build(BuildContext context) {
@@ -23,14 +30,17 @@ class Consultations extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const ScreenHeader(
-                title: 'Consultation',
+                title: 'Consultation 2',
                 text: 'Let\'s set up an appointment for you.'),
             const SizedBox(height: 30),
             Container(
                 padding: const EdgeInsets.all(20),
                 alignment: Alignment.center,
                 child: DropdownButton<String>(
-                    value: 'In-person consultation',
+                    style: const TextStyle(fontSize: 18, color: Colors.black),
+                    iconSize: 30,
+                    elevation: 50,
+                    value: consultationlMode,
                     isExpanded: true,
                     items: const [
                       DropdownMenuItem(
@@ -42,7 +52,9 @@ class Consultations extends StatelessWidget {
                           child: Text('Tele-consultation')),
                     ],
                     onChanged: (value) {
-                      print(value);
+                      setState(() {
+                        consultationlMode = value!;
+                      });
                     })),
             const SizedBox(height: 40),
             const SizedBox(

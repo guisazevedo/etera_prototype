@@ -26,12 +26,13 @@ class TopUp extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            const SizedBox(height: 40),
+            const SizedBox(height: 60),
             Image.asset(
               "images/eTera_logo.png",
               height: 100,
               fit: BoxFit.fitHeight,
             ),
+            const SizedBox(height: 20),
             const RedeemProduct(
               icon: Icons.gpp_good_outlined,
               text: 'Easy Pix',
@@ -49,7 +50,7 @@ class TopUp extends StatelessWidget {
                 icon: Icons.handshake_outlined,
                 text: 'Sponsor:\nA helping hand',
                 direction: Sponsor()),
-            const SizedBox(height: 40),
+            const SizedBox(height: 60),
             const SizedBox(
               width: double.infinity,
               child: Text(

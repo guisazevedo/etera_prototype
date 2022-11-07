@@ -42,6 +42,7 @@ At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergr
 // todo => how to wrap text (above)
 // todo => Include "Copyright (c) 2022" on the bottom of every page
 // todo => @ very end -> review project and refactor it
+// todo => organize folders
 
 // structural to dos
 

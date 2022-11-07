@@ -14,7 +14,7 @@ class Loans extends StatelessWidget {
           ),
           automaticallyImplyLeading: false,
           title: const Text(
-            'eTERA - Loans',
+            'eTERA - Medical loans',
             style: kAppBarStyle,
           )),
       body: SingleChildScrollView(

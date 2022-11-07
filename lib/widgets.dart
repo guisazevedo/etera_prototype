@@ -73,8 +73,8 @@ class OptionsHomeMenu extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(10),
       child: SizedBox(
-        width: 120,
-        height: 120,
+        width: 140,
+        height: 140,
         child: ElevatedButton(
           style: ElevatedButton.styleFrom(
               backgroundColor: Colors.white,
@@ -89,10 +89,11 @@ class OptionsHomeMenu extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Icon(icon, color: Colors.black),
-              const SizedBox(height: 5),
+              Icon(icon, size: 30, color: Colors.black),
+              const SizedBox(height: 10),
               Text(
                 text,
+                textAlign: TextAlign.center,
                 style: const TextStyle(
                     color: Colors.black,
                     fontSize: 20,
@@ -115,8 +116,12 @@ class TermsConditionsAlert extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AlertDialog(
-      title: const Text("Terms & Conditions"),
-      content: const Text("Do you agree with eTERA's terms & conditions?"),
+      title: const Text(
+        "Terms & Conditions",
+        style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
+      ),
+      content: const Text("Do you agree with eTERA's terms & conditions?",
+          style: TextStyle(fontSize: 18, fontWeight: FontWeight.normal)),
       actions: <Widget>[
         Row(
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -126,6 +131,7 @@ class TermsConditionsAlert extends StatelessWidget {
                 child: const Center(
                     child: Text(
                   "YES",
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                   textAlign: TextAlign.center,
                 )),
                 onPressed: () {
@@ -141,6 +147,7 @@ class TermsConditionsAlert extends StatelessWidget {
                 child: const Center(
                     child: Text(
                   "NO",
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.normal),
                   textAlign: TextAlign.center,
                 )),
                 onPressed: () {
@@ -152,6 +159,7 @@ class TermsConditionsAlert extends StatelessWidget {
                 child: const Center(
                     child: Text(
                   "Terms &\nConditions",
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.normal),
                   textAlign: TextAlign.center,
                 )),
                 onPressed: () {
@@ -177,9 +185,11 @@ class FollowOpenBankingAlert extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AlertDialog(
-      title: const Text("Open Banking"),
+      title: const Text("Open Banking",
+          style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
       content: const Text(
-          "You will be directed to the selected bank.\n\nPlease follow the authorization instructions there to complete the process."),
+          "You will be directed to the selected bank.\n\nPlease follow the authorization instructions there to complete the process.",
+          style: TextStyle(fontSize: 20, fontWeight: FontWeight.normal)),
       actions: <Widget>[
         Row(
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -189,6 +199,7 @@ class FollowOpenBankingAlert extends StatelessWidget {
                 child: const Center(
                     child: Text(
                   "OK",
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                   textAlign: TextAlign.center,
                 )),
                 onPressed: () {
@@ -214,9 +225,11 @@ class SponsorAlert extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AlertDialog(
-      title: const Text("Sponsor selected"),
+      title: const Text("Sponsor selected",
+          style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
       content: const Text(
-          "Great, we will take it from here! \n\nYou will hear from us when your sponsor approves it."),
+          "Great, we will take it from here! \n\nYou will hear from us when your sponsor approves it.",
+          style: TextStyle(fontSize: 20, fontWeight: FontWeight.normal)),
       actions: <Widget>[
         Row(
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -226,6 +239,7 @@ class SponsorAlert extends StatelessWidget {
                 child: const Center(
                     child: Text(
                   "OK",
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                   textAlign: TextAlign.center,
                 )),
                 onPressed: () {

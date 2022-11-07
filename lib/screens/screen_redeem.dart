@@ -1,11 +1,13 @@
-import 'package:etera_prototype/screens/redeem/screen_insurance.dart';
+//import 'package:etera_prototype/screens/redeem/screen_insurance.dart';
 import 'package:etera_prototype/screens/redeem/screen_loan.dart';
+import 'package:etera_prototype/screens/redeem/screen_surgery.dart';
 import 'package:flutter/material.dart';
 import 'package:etera_prototype/widgets.dart';
 import 'package:etera_prototype/constants.dart';
 import 'package:etera_prototype/screens/redeem/screen_consultations.dart';
 import 'package:etera_prototype/screens/redeem/screen_exams.dart';
 // import 'package:etera_prototype/screens/redeem/screen_yalo.dart';
+import 'package:etera_prototype/screens/redeem/screen_consultation2.dart';
 
 class RedeemOverall extends StatelessWidget {
   const RedeemOverall({Key? key}) : super(key: key);
@@ -27,27 +29,24 @@ class RedeemOverall extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            const SizedBox(height: 20),
+            const SizedBox(height: 60),
             Image.asset(
               "images/eTera_logo.png",
               height: 100,
               fit: BoxFit.fitHeight,
             ),
-            const RedeemProduct(
+            const SizedBox(height: 20),
+            RedeemProduct(
                 icon: Icons.medical_services_outlined,
                 text: 'Consultations',
-                direction: Consultations()),
+                direction: Consultation2()),
             const RedeemProduct(
                 icon: Icons.biotech_sharp, text: 'Exams', direction: Exams()),
             const RedeemProduct(
-                icon: Icons.account_balance_wallet_outlined,
-                text: 'Medical Loans',
-                direction: Loans()),
-            const RedeemProduct(
-                icon: Icons.smart_button_outlined,
-                text: 'Smart insurance',
-                direction: Insurance()),
-            const SizedBox(height: 40),
+                icon: Icons.emergency_outlined,
+                text: 'Surgery',
+                direction: Surgery()),
+            const SizedBox(height: 60),
             const SizedBox(
               width: double.infinity,
               child: Text(

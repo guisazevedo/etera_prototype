@@ -1,9 +1,10 @@
+import 'package:etera_prototype/screens/redeem/screen_insurance.dart';
 import 'package:etera_prototype/screens/screen_top_up.dart';
 import 'package:flutter/material.dart';
 import 'package:etera_prototype/widgets.dart';
 import 'package:etera_prototype/screens/screen_redeem.dart';
 import 'package:etera_prototype/constants.dart';
-import 'package:etera_prototype/screens/screen_tips.dart';
+//import 'package:etera_prototype/screens/screen_tips.dart';
 import 'package:etera_prototype/screens/screen_info.dart';
 
 // todo => include msg of benefits -> Drogasil, Bank, etc...
@@ -59,7 +60,7 @@ class Home extends StatelessWidget {
                     textAlign: TextAlign.center,
                   )),
               const SizedBox(
-                height: 40,
+                height: 20,
               ),
               Column(
                 children: [
@@ -83,18 +84,18 @@ class Home extends StatelessWidget {
                     children: const [
                       OptionsHomeMenu(
                         icon: Icons.lightbulb_outline,
-                        text: 'Tips',
-                        direction: Tips(),
+                        text: 'Smart insurance',
+                        direction: Insurance(),
                       ),
                       OptionsHomeMenu(
                           icon: Icons.local_library_outlined,
-                          text: 'Info',
+                          text: 'Info & \nTips',
                           direction: Info()),
                     ],
                   ),
                 ],
               ),
-              const SizedBox(height: 60),
+              const SizedBox(height: 40),
               const SizedBox(
                 width: double.infinity,
                 child: Text(

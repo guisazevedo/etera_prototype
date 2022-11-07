@@ -37,7 +37,7 @@ class Sponsor extends StatelessWidget {
               height: 10,
             ),
             TextField(
-                // todo => format inputed value
+                // todo => format inputted value
                 onChanged: (value) {
                   //Do something with the user input.
                 },
@@ -47,19 +47,19 @@ class Sponsor extends StatelessWidget {
             const SizedBox(height: 16),
             const SizedBox(height: 10),
             const Text(
-              'eMail:',
+              'Telephone:',
               style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
             ),
             const SizedBox(
               height: 10,
             ),
             TextField(
-                // todo => format inputed value
+                // todo => format inputted value
                 onChanged: (value) {
                   //Do something with the user input.
                 },
                 decoration: kTextFieldDecoration.copyWith(
-                  hintText: 'Sponsor\'s email',
+                  hintText: '(00) 0000 - 00 00',
                 )),
             const SizedBox(height: 16),
             ElevatedButton(
