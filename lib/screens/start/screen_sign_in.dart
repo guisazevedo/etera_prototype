@@ -84,7 +84,7 @@ class SignIn extends StatelessWidget {
                       children: <TextSpan>[
                         TextSpan(
                             text:
-                                '  Sign up.', // todo => sign up should be a button and bold
+                                '  Sign up.', // todo => sign up should be a button
                             style: TextStyle(
                                 fontSize: 18, fontWeight: FontWeight.bold))
                       ])),
@@ -101,20 +101,12 @@ class SignIn extends StatelessWidget {
               ]),
         ),
       ),
-      bottomNavigationBar: BottomAppBar(
-        //todo => improve BottomAppBar with logos
-        color: Colors.grey.shade100,
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: const [
-            PartnershipItems(text: 'Partnerships:'),
-            PartnershipItems(text: 'DrC\nlogo'),
-            PartnershipItems(text: 'Bank\nlogo'),
-            PartnershipItems(text: 'DrugStore\nlogo'),
-            PartnershipItems(text: 'Insurance\nlogo')
-          ],
-        ),
-      ),
+      bottomNavigationBar: const CustomBottomAppBar(
+          text: 'Partners:',
+          icon1: 'drc',
+          icon2: 'chubb',
+          icon3: 'banco_bv',
+          icon4: 'drogasil'),
     );
   }
 }

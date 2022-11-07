@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:etera_prototype/constants.dart';
 import 'package:page_transition/page_transition.dart';
-import 'package:etera_prototype/screens/screen_home.dart';
+import 'package:etera_prototype/screens/home/screen_home.dart';
 
 // Animated text on app entry
 class AnimatedEntry extends StatelessWidget {
@@ -37,8 +37,8 @@ class AnimatedEntry extends StatelessWidget {
 }
 
 // Partnership widgets
-class PartnershipItems extends StatelessWidget {
-  const PartnershipItems({super.key, required this.text});
+class PartnerItems extends StatelessWidget {
+  const PartnerItems({super.key, required this.text});
 
   final String text;
 
@@ -57,8 +57,8 @@ class PartnershipItems extends StatelessWidget {
 }
 
 // Option menu
-class OptionsMenu extends StatelessWidget {
-  const OptionsMenu(
+class OptionsHomeMenu extends StatelessWidget {
+  const OptionsHomeMenu(
       {super.key,
       required this.icon,
       required this.text,
@@ -95,7 +95,7 @@ class OptionsMenu extends StatelessWidget {
                 text,
                 style: const TextStyle(
                     color: Colors.black,
-                    fontSize: 16,
+                    fontSize: 18,
                     fontWeight: FontWeight.bold),
               )
             ],
@@ -179,7 +179,44 @@ class FollowOpenBankingAlert extends StatelessWidget {
     return AlertDialog(
       title: const Text("Open Banking"),
       content: const Text(
-          "You will be directed to the selected bank.\n\nPlease follow the authorization instructions."),
+          "You will be directed to the selected bank.\n\nPlease follow the authorization instructions there to complete the process."),
+      actions: <Widget>[
+        Row(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              TextButton(
+                child: const Center(
+                    child: Text(
+                  "OK",
+                  textAlign: TextAlign.center,
+                )),
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      PageTransition(
+                          type: PageTransitionType.rightToLeft,
+                          child: const Home()));
+                },
+              ),
+            ])
+      ],
+    );
+  }
+}
+
+// Terms and Conditions alert for joining
+class SponsorAlert extends StatelessWidget {
+  const SponsorAlert({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return AlertDialog(
+      title: const Text("Sponsor selected"),
+      content: const Text(
+          "Great, we will take it from here! \n\nYou will hear from us when your sponsor approves it."),
       actions: <Widget>[
         Row(
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -207,24 +244,64 @@ class FollowOpenBankingAlert extends StatelessWidget {
 
 // Custom BottomAppBar
 class CustomBottomAppBar extends StatelessWidget {
-  const CustomBottomAppBar({
-    Key? key,
-  }) : super(key: key);
+  const CustomBottomAppBar(
+      {super.key,
+      required this.text,
+      required this.icon1,
+      required this.icon2,
+      required this.icon3,
+      required this.icon4});
+
+  final String text;
+  final String icon1;
+  final String icon2;
+  final String icon3;
+  final String icon4;
 
   @override
   Widget build(BuildContext context) {
     return BottomAppBar(
-      //todo => improve BottomAppBar with logos
       color: Colors.grey.shade100,
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: const [
-          PartnershipItems(text: 'Partnerships:'),
-          PartnershipItems(text: 'DrC\nlogo'),
-          PartnershipItems(text: 'Bank\nlogo'),
-          PartnershipItems(text: 'DrugStore\nlogo'),
-          PartnershipItems(text: 'Insurance\nlogo')
-        ],
+      child: Container(
+        padding: const EdgeInsets.all(15),
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              text,
+              style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+            ),
+            const SizedBox(width: 20),
+            Image.asset(
+              './images/$icon1.png',
+              height: 50,
+              width: 50,
+              fit: BoxFit.fitWidth,
+            ),
+            const SizedBox(width: 20),
+            Image.asset(
+              './images/$icon2.png',
+              height: 50,
+              width: 50,
+              fit: BoxFit.fitWidth,
+            ),
+            const SizedBox(width: 20),
+            Image.asset(
+              './images/$icon3.png',
+              height: 50,
+              width: 50,
+              fit: BoxFit.fitWidth,
+            ),
+            const SizedBox(width: 20),
+            Image.asset(
+              './images/$icon4.png',
+              height: 50,
+              width: 50,
+              fit: BoxFit.fitWidth,
+            ),
+          ],
+        ),
       ),
     );
   }
@@ -279,9 +356,9 @@ class RedeemProduct extends StatelessWidget {
               child: Text(
                 text,
                 style: const TextStyle(
-                  color: Colors.black,
-                  fontWeight: FontWeight.bold,
-                ),
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 18),
               ),
             ),
           ],
@@ -303,10 +380,11 @@ class TitleValue extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(title, style: const TextStyle(color: Colors.black38)),
+        Text(title,
+            style: const TextStyle(fontSize: 18, color: Colors.black38)),
         Text(
           value,
-          style: const TextStyle(fontSize: 18),
+          style: const TextStyle(fontSize: 20),
         )
       ],
     );
@@ -334,5 +412,33 @@ class OpenBankSelection extends StatelessWidget {
                 color: Colors.black, fontSize: 16, fontWeight: FontWeight.bold),
           ),
         ));
+  }
+}
+
+// Screen Headers
+class ScreenHeader extends StatelessWidget {
+  const ScreenHeader({super.key, required this.title, required this.text});
+
+  final String title;
+  final String text;
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        const SizedBox(height: 22), //
+        Text(
+          title,
+          style: const TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+        ),
+        const SizedBox(height: 30),
+        Text(
+          text,
+          style: const TextStyle(fontSize: 18),
+        ),
+        const SizedBox(height: 40),
+      ],
+    );
   }
 }

@@ -1,10 +1,10 @@
-import 'package:etera_prototype/screens/screen_sign_in.dart';
+import 'package:etera_prototype/screens/start/screen_sign_in.dart';
 import 'package:flutter/material.dart';
 import 'package:etera_prototype/constants.dart';
 import 'package:page_transition/page_transition.dart';
-import 'package:etera_prototype/screens/screen_home.dart';
+import 'package:etera_prototype/screens/home/screen_home.dart';
 
-// todo => log that the person accepted the T&
+// todo => log that the person accepted the T&C
 
 class TermsConditions extends StatelessWidget {
   const TermsConditions({Key? key}) : super(key: key);
@@ -34,7 +34,7 @@ class TermsConditions extends StatelessWidget {
               child: const Text(termsConditions),
             ),
             Container(
-              alignment: Alignment.centerLeft, // todo => what the hell???
+              alignment: Alignment.centerLeft,
               padding: const EdgeInsets.fromLTRB(20, 50, 20, 20),
               child: const Text(
                 'Do you accept the terms and conditions?',
@@ -87,6 +87,3 @@ class TermsConditions extends StatelessWidget {
     );
   }
 }
-
-// todo => include terms on scrollable text
-// todo => Accept and Don't should be at the bottom => guarantee user scrolled

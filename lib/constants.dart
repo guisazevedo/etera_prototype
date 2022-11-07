@@ -7,7 +7,7 @@ const kTextStyleEntry =
 // decoration of text fields
 const kTextFieldDecoration = InputDecoration(
     hintText: '',
-    hintStyle: TextStyle(color: Colors.grey),
+    hintStyle: TextStyle(color: Colors.grey, fontSize: 18),
     contentPadding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
     border: OutlineInputBorder(
       borderRadius: BorderRadius.all(Radius.circular(4.0)),
@@ -35,24 +35,28 @@ Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming 
 
 At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur''';
 
+/// todo EASY @home
+/// . get all logos
+
 // todo => how to wrap text (above)
 // todo => create a kAppBar
 // todo => Include "Copyright (c) 2022" on the bottom of every page
-// todo => BottomAppBar include logos partnerships
+// todo => BottomAppBar include logos partners
 // todo => review project and refactor it
 
 // structural to dos
 /// todo => TOP UP SCREEN:
+/// . logos
 /// . Pix number "copy" icon
 
 /// todo => Monthly installments
-/// . improve text...
 /// . screen => explain: text; logo Bacen; horizontal scroll list of banks/programs;
 /// . log transaction & card
 /// . possibility to cancel future transfers
 
 /// todo => Benefit programs
 /// . log transaction
+/// . generate QR code
 
 /// todo => Sponsor
 /// .screen => explain Sponsor & msg; name; you 1:1x sponsor or you 2:1x sponsor; limit
@@ -71,7 +75,8 @@ At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergr
 /// . add terms and conditions from DrC
 
 /// todo => Yalo
-/// . see picture on iPhone
+/// . hide it for now OK
+/// . see picture on iPhone OK
 /// . add terms and conditions from Yalo/DrC
 
 /// todo => Loans
@@ -80,15 +85,21 @@ At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergr
 
 /// todo => Insurance
 /// . understand...
+/// . simply select/unselect -> show values -> send
 
 /// todo => page with all receipts
 
 /// todo => TIPS
 /// . flash card valid tip
-/// . list of tips/dynamic discounts
+/// . list of tips/dynamic discounts -> insurance simulation
 
 /// todo => INFO
 /// . personal data -> edit
 /// . FAQ
 /// . Receipts (cards)
 /// . Receipts list of expired / transacted
+
+/// todo => TOP-UP
+/// . Sponsor => make it contrast and OK when done
+
+/// todo => at the very end -> check to see dynamic sizing

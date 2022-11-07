@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:etera_prototype/widgets.dart';
 import 'package:etera_prototype/constants.dart';
 
-class Loans extends StatelessWidget {
-  const Loans({Key? key}) : super(key: key);
+class Tips extends StatelessWidget {
+  const Tips({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +14,7 @@ class Loans extends StatelessWidget {
           ),
           automaticallyImplyLeading: false,
           title: const Text(
-            'eTERA - Loans',
+            'eTERA - Tips',
             style: TextStyle(color: Colors.black),
           )),
       body: SingleChildScrollView(
@@ -23,8 +23,9 @@ class Loans extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: const [
             ScreenHeader(
-                title: 'Loans',
-                text: 'Let\'s set up the best loan alternative for you.'),
+                title: 'Tips and Hints!',
+                text:
+                    'Follow us closely for best dynamic information, discounts and premiums'),
             SizedBox(height: 30),
             SizedBox(
               width: double.infinity,

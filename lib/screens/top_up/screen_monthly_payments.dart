@@ -14,7 +14,7 @@ class TransferCash extends StatelessWidget {
           ),
           automaticallyImplyLeading: false,
           title: const Text(
-            'eTERA - Transfer',
+            'eTERA - Monthly payments',
             style: TextStyle(color: Colors.black),
           )),
       body: SingleChildScrollView(
@@ -22,15 +22,11 @@ class TransferCash extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const SizedBox(height: 20),
-            const Text(
-              'Make monthly transfers into your Health Savings Account (HSA)',
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-            ),
-            const SizedBox(height: 30),
-            const Text("Let's use the Banco Central's Iniciacao de Pagamento."),
-            const SizedBox(
-                height: 40), // todo => include banco central Brasil logo
+            const ScreenHeader(
+                title:
+                    'Monthly transfers into your Health Investment Account (HIA)',
+                text: 'Powered by Banco Central\'s Iniciacao de Pagamento.'),
+            // const SizedBox(height: 60), // todo => include BC logo
             SizedBox(
                 height: 120,
                 width: double.infinity,
@@ -52,12 +48,12 @@ class TransferCash extends StatelessWidget {
             const SizedBox(height: 20),
             //const TitleValue(
             //title: 'Selected bank',
-            //value: 'Nu Bank'), // todo => name of selected bank
+            //value: 'Nu Bank'), // todo => if button works -> erase this TitleValue
             const SizedBox(
               height: 40,
             ),
             const Text(
-              'Enter monthly transfer \nto your HSA:',
+              'Enter monthly value to be transferred \ninto your HSA:',
               style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
             ),
             const SizedBox(
@@ -77,7 +73,7 @@ class TransferCash extends StatelessWidget {
                 showDialog(
                   context: context,
                   builder: (BuildContext context) {
-                    return const FollowOpenBankingAlert(); // todo => use "please follow instruction on your bank web service"
+                    return const FollowOpenBankingAlert();
                   },
                 );
               },
@@ -99,7 +95,12 @@ class TransferCash extends StatelessWidget {
           ],
         ),
       ),
-      bottomNavigationBar: const CustomBottomAppBar(),
+      bottomNavigationBar: const CustomBottomAppBar(
+          text: 'Partners:',
+          icon1: 'drc',
+          icon2: 'chubb',
+          icon3: 'banco_bv',
+          icon4: 'drogasil'),
     );
   }
 }

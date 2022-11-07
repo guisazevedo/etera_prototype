@@ -23,14 +23,12 @@ class Pix extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const SizedBox(height: 20),
-            const Text(
-              'Make a single transfer into your Health Savings Account (HSA)',
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+            const ScreenHeader(
+              title: 'Pix transfer into your Health Investment Account (HIA)',
+              text:
+                  'Investments could be one-off or scheduled monthly at your bank.',
             ),
-            const SizedBox(height: 30),
-            const Text('Simply make a payment into your HSA account.'),
-            const SizedBox(height: 60), // todo => include PIX logo
+            // const SizedBox(height: 60), // todo => include PIX logo
             const TitleValue(title: 'Institution', value: '000 - eTERA'),
             const SizedBox(height: 40),
             Row(
@@ -63,7 +61,12 @@ class Pix extends StatelessWidget {
           ],
         ),
       ),
-      bottomNavigationBar: const CustomBottomAppBar(),
+      bottomNavigationBar: const CustomBottomAppBar(
+          text: 'Partners:',
+          icon1: 'drc',
+          icon2: 'chubb',
+          icon3: 'banco_bv',
+          icon4: 'drogasil'),
     );
   }
 }

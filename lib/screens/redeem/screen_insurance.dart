@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:etera_prototype/widgets.dart';
+import 'package:etera_prototype/constants.dart';
 
 class Insurance extends StatelessWidget {
   const Insurance({Key? key}) : super(key: key);
@@ -7,7 +8,6 @@ class Insurance extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blue,
       appBar: AppBar(
           leading: const BackButton(
             color: Colors.black,
@@ -17,8 +17,32 @@ class Insurance extends StatelessWidget {
             'eTERA - Insurance',
             style: TextStyle(color: Colors.black),
           )),
-      body: Container(),
-      bottomNavigationBar: const CustomBottomAppBar(),
+      body: SingleChildScrollView(
+        padding: const EdgeInsets.fromLTRB(20, 40, 20, 40),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: const [
+            ScreenHeader(
+                title: 'Insurance',
+                text: 'Let\'s set up the best insurance for you.'),
+            SizedBox(height: 30),
+            SizedBox(
+              width: double.infinity,
+              child: Text(
+                kCopyright,
+                style: TextStyle(color: Colors.grey),
+                textAlign: TextAlign.center,
+              ),
+            )
+          ],
+        ),
+      ),
+      bottomNavigationBar: const CustomBottomAppBar(
+          text: 'Partners:',
+          icon1: 'drc',
+          icon2: 'chubb',
+          icon3: 'banco_bv',
+          icon4: 'drogasil'),
     );
   }
 }

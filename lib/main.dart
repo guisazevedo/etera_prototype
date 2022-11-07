@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:etera_prototype/screens/screen_flash_entry.dart';
+import 'package:etera_prototype/screens/start/screen_flash_entry.dart';
 
 // todo => improve THEME & refactor other files
 

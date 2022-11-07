@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:etera_prototype/widgets.dart';
 import 'package:etera_prototype/screens/screen_redeem.dart';
 import 'package:etera_prototype/constants.dart';
+import 'package:etera_prototype/screens/screen_tips.dart';
+import 'package:etera_prototype/screens/screen_info.dart';
 
 // todo => include msg of benefits -> Drogasil, Bank, etc...
 // todo => include flash cards for first time loggin in
@@ -28,7 +30,7 @@ class Home extends StatelessWidget {
             children: [
               const Text(
                 'Hello, Maria!',
-                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
               ), // todo => Maria -> name of user
               const SizedBox(
                 height: 10,
@@ -41,7 +43,7 @@ class Home extends StatelessWidget {
                   height: 200,
                   child: const Text.rich(
                     TextSpan(
-                      text: 'to be upgraded with Lauren/Roberta\n\n',
+                      text: 'to be upgraded with Lauren\n\n',
                       style: TextStyle(fontSize: 16),
                       children: <TextSpan>[
                         TextSpan(
@@ -64,12 +66,12 @@ class Home extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: const [
-                      OptionsMenu(
+                      OptionsHomeMenu(
                         icon: Icons.download,
                         text: 'Top up',
                         direction: TopUp(),
                       ),
-                      OptionsMenu(
+                      OptionsHomeMenu(
                         icon: Icons.upload,
                         text: 'Redeem',
                         direction: RedeemOverall(),
@@ -79,15 +81,15 @@ class Home extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: const [
-                      OptionsMenu(
+                      OptionsHomeMenu(
                         icon: Icons.lightbulb_outline,
                         text: 'Tips',
-                        direction: Home(),
+                        direction: Tips(),
                       ),
-                      OptionsMenu(
+                      OptionsHomeMenu(
                           icon: Icons.local_library_outlined,
                           text: 'Info',
-                          direction: Home()),
+                          direction: Info()),
                     ],
                   ),
                 ],
@@ -106,7 +108,14 @@ class Home extends StatelessWidget {
         ),
       ),
       // backgroundColor: Colors.grey.shade100,
-      bottomNavigationBar: const CustomBottomAppBar(),
+      //bottomNavigationBar: const CustomBottomAppBar(),
+      bottomNavigationBar: const CustomBottomAppBar(
+        text: 'Partners:',
+        icon1: 'drc',
+        icon2: 'chubb',
+        icon3: 'banco_bv',
+        icon4: 'drogasil',
+      ),
     );
   }
 }

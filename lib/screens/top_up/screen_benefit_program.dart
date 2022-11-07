@@ -15,7 +15,7 @@ class QRCode extends StatelessWidget {
           ),
           automaticallyImplyLeading: false,
           title: const Text(
-            'eTERA - Benefit Programs',
+            'eTERA - Benefit programs',
             style: TextStyle(color: Colors.black),
           )),
       body: SingleChildScrollView(
@@ -23,15 +23,10 @@ class QRCode extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const SizedBox(height: 20), // todo => widget with "slide header"
-              const Text(
-                'Generate a QR Code',
-                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-              ),
-              const SizedBox(height: 30),
-              const Text(
-                  "Select the value you'd like the QR Code to charge your benefit program."),
-              const SizedBox(height: 40),
+              const ScreenHeader(
+                  title: 'Generate a QR Code',
+                  text:
+                      'Select the value you\'d like the QR Code to charge your benefit program.'),
               const Text(
                 'Enter value \nto the invoice:',
                 style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
@@ -61,8 +56,9 @@ class QRCode extends StatelessWidget {
               const SizedBox(height: 20),
               Center(
                 child: QrImage(
-                  data:
-                      'This is a simple QR code', // todo => model data generator
+                  data: // todo => what to do for more complex data?
+                      'Guilherme has super powers!!!',
+                  //'Bank XXX, Branch: xxx, Account: xxx, Value: xxx, CPF: xxx, Good until: xxx', // todo => model data generator
                   version: QrVersions.auto,
                   size: 200,
                   gapless: false,
@@ -79,7 +75,12 @@ class QRCode extends StatelessWidget {
               )
             ],
           )),
-      bottomNavigationBar: const CustomBottomAppBar(),
+      bottomNavigationBar: const CustomBottomAppBar(
+          text: 'Partners:',
+          icon1: 'drc',
+          icon2: 'chubb',
+          icon3: 'banco_bv',
+          icon4: 'drogasil'),
     );
   }
 }
