@@ -3,7 +3,7 @@ import 'package:etera_prototype/screens/top_up/screen_sponsor.dart';
 import 'package:flutter/material.dart';
 import 'package:etera_prototype/widgets.dart';
 import 'package:etera_prototype/constants.dart';
-//import 'package:etera_prototype/screens/top_up/screen_monthly_payments.dart';
+import 'package:etera_prototype/screens/top_up/screen_itp.dart';
 import 'package:etera_prototype/screens/top_up/screen_pix.dart';
 
 class TopUp extends StatelessWidget {
@@ -19,7 +19,7 @@ class TopUp extends StatelessWidget {
           automaticallyImplyLeading: false,
           title: const Text(
             'eTERA - Top up',
-            style: TextStyle(color: Colors.black),
+            style: kAppBarStyle,
           )),
       body: SingleChildScrollView(
         child: Column(
@@ -28,20 +28,21 @@ class TopUp extends StatelessWidget {
           children: const [
             SizedBox(height: 80), // todo => Fix size of containers - width
             RedeemProduct(
-                logo: 'Pix\nlogo',
-                text: 'Easy Pix',
-                direction: Pix()), // todo => logos and links
-            //RedeemProduct(
-            //logo: 'Transfer\nlogo',
-            //text: 'Monthly payments',
-            //direction: TransferCash()),
+              icon: Icons.gpp_good_outlined,
+              text: 'Easy Pix',
+              direction: Pix(),
+            ),
             RedeemProduct(
-                logo: 'QR Code\nlogo',
-                text: 'Benefit programs',
+                icon: Icons.calendar_month_outlined,
+                text: 'Payment Initiator',
+                direction: TransferCash()),
+            RedeemProduct(
+                icon: Icons.qr_code_scanner,
+                text: 'Benefit Programs',
                 direction: QRCode()),
             RedeemProduct(
-                logo: 'Shake Hands\nlogo',
-                text: 'Sponsor:\nThe help you need',
+                icon: Icons.handshake_outlined,
+                text: 'Sponsor:\nA helping hand',
                 direction: Sponsor()),
             SizedBox(height: 80),
             SizedBox(

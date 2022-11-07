@@ -19,7 +19,7 @@ class Home extends StatelessWidget {
           automaticallyImplyLeading: false,
           title: const Text(
             'eTERA - Home',
-            style: TextStyle(color: Colors.black),
+            style: kAppBarStyle,
           )),
       body: SingleChildScrollView(
         child: Padding(
@@ -30,10 +30,10 @@ class Home extends StatelessWidget {
             children: [
               const Text(
                 'Hello, Maria!',
-                style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+                style: TextStyle(fontSize: 26, fontWeight: FontWeight.bold),
               ), // todo => Maria -> name of user
               const SizedBox(
-                height: 10,
+                height: 20,
               ),
               Container(
                   decoration: const BoxDecoration(

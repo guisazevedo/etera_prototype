@@ -95,7 +95,7 @@ class OptionsHomeMenu extends StatelessWidget {
                 text,
                 style: const TextStyle(
                     color: Colors.black,
-                    fontSize: 18,
+                    fontSize: 20,
                     fontWeight: FontWeight.bold),
               )
             ],
@@ -263,7 +263,7 @@ class CustomBottomAppBar extends StatelessWidget {
     return BottomAppBar(
       color: Colors.grey.shade100,
       child: Container(
-        padding: const EdgeInsets.all(15),
+        padding: const EdgeInsets.fromLTRB(10, 15, 10, 0),
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,
@@ -273,92 +273,43 @@ class CustomBottomAppBar extends StatelessWidget {
               style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
             ),
             const SizedBox(width: 20),
-            Image.asset(
-              './images/$icon1.png',
-              height: 50,
-              width: 50,
-              fit: BoxFit.fitWidth,
-            ),
-            const SizedBox(width: 20),
-            Image.asset(
-              './images/$icon2.png',
-              height: 50,
-              width: 50,
-              fit: BoxFit.fitWidth,
-            ),
-            const SizedBox(width: 20),
-            Image.asset(
-              './images/$icon3.png',
-              height: 50,
-              width: 50,
-              fit: BoxFit.fitWidth,
-            ),
-            const SizedBox(width: 20),
-            Image.asset(
-              './images/$icon4.png',
-              height: 50,
-              width: 50,
-              fit: BoxFit.fitWidth,
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-}
-
-// Redeem products todo => need to include OnPressed
-class RedeemProduct extends StatelessWidget {
-  const RedeemProduct({
-    super.key,
-    required this.logo,
-    required this.text,
-    required this.direction,
-  });
-
-  final String logo; // todo => needs to be transformed into Image when logo
-  final String text;
-  final Widget direction;
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      margin: const EdgeInsets.fromLTRB(20, 10, 20, 10),
-      height: 100,
-      child: ElevatedButton(
-        style: ElevatedButton.styleFrom(
-          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5)),
-          backgroundColor: Colors.white,
-          elevation: 5,
-          shadowColor: Colors.grey,
-        ),
-        onPressed: () {
-          Navigator.push(
-              context,
-              PageTransition(
-                  type: PageTransitionType.rightToLeft, child: direction));
-        },
-        child: Row(
-          children: [
-            Container(
-              width: 50,
-              margin: const EdgeInsets.all(20),
-              child: Text(
-                logo,
-                style: const TextStyle(
-                  color: Colors.black,
-                  fontWeight: FontWeight.bold,
-                ),
+            ClipRRect(
+              borderRadius: BorderRadius.circular(10),
+              child: Image.asset(
+                './images/$icon1.png',
+                height: 50,
+                width: 50,
+                fit: BoxFit.fitWidth,
               ),
             ),
-            Container(
-              margin: const EdgeInsets.all(20),
-              child: Text(
-                text,
-                style: const TextStyle(
-                    color: Colors.black,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18),
+            const SizedBox(width: 20),
+            ClipRRect(
+              borderRadius: BorderRadius.circular(10),
+              child: Image.asset(
+                './images/$icon2.png',
+                height: 50,
+                width: 50,
+                fit: BoxFit.fitWidth,
+              ),
+            ),
+            const SizedBox(width: 20),
+            ClipRRect(
+              borderRadius: BorderRadius.circular(10),
+              child: Image.asset(
+                './images/$icon3.png',
+                height: 50,
+                width: 50,
+                fit: BoxFit.fitWidth,
+              ),
+            ),
+            const SizedBox(width: 20),
+            ClipRRect(
+              borderRadius: BorderRadius.circular(10),
+              child: Image.asset(
+                './images/$icon4.png',
+                height: 50,
+                width: 50,
+                fit: BoxFit.fitWidth,
               ),
             ),
           ],
@@ -439,6 +390,65 @@ class ScreenHeader extends StatelessWidget {
         ),
         const SizedBox(height: 40),
       ],
+    );
+  }
+}
+
+// Redeem products
+class RedeemProduct extends StatelessWidget {
+  const RedeemProduct({
+    super.key,
+    required this.icon,
+    required this.text,
+    required this.direction,
+  });
+
+  final IconData icon;
+  final String text;
+  final Widget direction;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      margin: const EdgeInsets.fromLTRB(20, 10, 20, 10),
+      height: 100,
+      child: ElevatedButton(
+        style: ElevatedButton.styleFrom(
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5)),
+          backgroundColor: Colors.white,
+          elevation: 5,
+          shadowColor: Colors.grey,
+        ),
+        onPressed: () {
+          Navigator.push(
+              context,
+              PageTransition(
+                  type: PageTransitionType.rightToLeft, child: direction));
+        },
+        child: Row(
+          children: [
+            Container(
+              width: 50,
+              margin: const EdgeInsets.all(20),
+              child: Icon(
+                icon,
+                color: Colors.black,
+                size: 40,
+              ),
+            ),
+            Container(
+              margin: const EdgeInsets.all(20),
+              child: Text(
+                text,
+                style: const TextStyle(
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 20),
+              ),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }

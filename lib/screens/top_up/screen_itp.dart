@@ -15,7 +15,7 @@ class TransferCash extends StatelessWidget {
           automaticallyImplyLeading: false,
           title: const Text(
             'eTERA - Monthly payments',
-            style: TextStyle(color: Colors.black),
+            style: kAppBarStyle,
           )),
       body: SingleChildScrollView(
         padding: const EdgeInsets.fromLTRB(20, 40, 20, 40),

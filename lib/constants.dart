@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 
+// format AppBar
+const kAppBarStyle =
+    TextStyle(fontSize: 24, fontWeight: FontWeight.bold, color: Colors.black);
+
 // text style of entry text
 const kTextStyleEntry =
     TextStyle(fontSize: 40.0, fontWeight: FontWeight.w900, color: Colors.black);
@@ -35,19 +39,11 @@ Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming 
 
 At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur''';
 
-/// todo EASY @home
-/// . get all logos
-
 // todo => how to wrap text (above)
-// todo => create a kAppBar
 // todo => Include "Copyright (c) 2022" on the bottom of every page
-// todo => BottomAppBar include logos partners
-// todo => review project and refactor it
+// todo => @ very end -> review project and refactor it
 
 // structural to dos
-/// todo => TOP UP SCREEN:
-/// . logos
-/// . Pix number "copy" icon
 
 /// todo => Monthly installments
 /// . screen => explain: text; logo Bacen; horizontal scroll list of banks/programs;
@@ -63,9 +59,6 @@ At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergr
 /// try do design the msg the sponsor will receive (even if on this prototype app)
 /// explain to Sponsor the tax benefit
 
-/// todo => REDEEM SCREEN
-/// . logos
-
 /// todo => Consultations
 /// . screen sequence -> Online / Present -> City -> Specialty (show price) -> Branch -> day/time/doctor -> to whom? -> pay now (discount) or later (no discount)
 /// . add terms and conditions from DrC
@@ -73,11 +66,6 @@ At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergr
 /// todo => Exams
 /// . understand...
 /// . add terms and conditions from DrC
-
-/// todo => Yalo
-/// . hide it for now OK
-/// . see picture on iPhone OK
-/// . add terms and conditions from Yalo/DrC
 
 /// todo => Loans
 /// . see picture on iPhone

@@ -20,7 +20,7 @@ class RedeemOverall extends StatelessWidget {
           automaticallyImplyLeading: false,
           title: const Text(
             'eTERA - Redeem',
-            style: TextStyle(color: Colors.black),
+            style: kAppBarStyle,
           )),
       body: SingleChildScrollView(
         child: Column(
@@ -29,18 +29,18 @@ class RedeemOverall extends StatelessWidget {
           children: const [
             SizedBox(height: 80),
             RedeemProduct(
-                logo: 'DrC\nlogo',
+                icon: Icons.medical_services_outlined,
                 text: 'Consultations',
                 direction: Consultations()),
-            RedeemProduct(logo: 'DrC\nlogo', text: 'Exams', direction: Exams()),
-            // RedeemProduct( // todo => use or delete it
-            //logo: 'Yalo\nlogo', text: 'Card DrConsulta', direction: Yalo()),
-            // RedeemProduct(logo: 'Cuidar.me\nlogo', text: 'Healthcare Plans'),
             RedeemProduct(
-                logo: 'Bank\nlogo', text: 'Medical loans', direction: Loans()),
+                icon: Icons.biotech_sharp, text: 'Exams', direction: Exams()),
             RedeemProduct(
-                logo: 'Insurance\nlogo',
-                text: 'Custom insurance',
+                icon: Icons.account_balance_wallet_outlined,
+                text: 'Medical Loans',
+                direction: Loans()),
+            RedeemProduct(
+                icon: Icons.smart_button_outlined,
+                text: 'Smart insurance',
                 direction: Insurance()),
             SizedBox(height: 40),
             SizedBox(
